@@ -1,3 +1,5 @@
+/* Copyright (C) 2024 anonymous
+
 This file is part of PSFree.
 
 PSFree is free software: you can redistribute it and/or modify
