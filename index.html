@@ -1,129 +1,116 @@
-<html manifest="Cache.manifest">
-
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="utf-8" />
-    <title>    MAGIC STORE - PS4 9.00</title>
-    <link rel="shortcut icon" href="favicon.ico"></link>
-</head>   
-<body>
-	<img src="FF92999F-B4A9-402C-8959-03963319AFEB.png" style="max-width:90%; display:block; margin:20px auto;">
-	
-	<script>
-window.applicationCache.ondownloading = function()
-{
-	alert("Caching started !!")
-};
-
-window.applicationCache.onprogress = function(a)
-{
-	document.getElementById("progress").innerHTML="<h3>Caching Status: "+(Math.round(100*(a.loaded/a.total)))+"% Completed</h3>";
-};
-
-window.applicationCache.oncached = window.applicationCache.onupdateready = function()
-{
-	alert("Page Cached!!")
-};
-</script>
-    <script>
-        // Init on English Language
-        changeLanguage('english')
-
-        function changeLanguage(lang) {
-            Array.from(document.querySelectorAll('.language')).map( element => {
-                element.style.display = 'none'
-            });
-            if (document.getElementById(lang)) {
-                document.getElementById(lang).style.display = 'block';
-            }
+    <meta charset="utf-8">
+    <title>MAGIC STORE - PS4 EXPLOIT PORTAL</title>
+    <style>
+        :root {
+            --neon-blue: #00d2ff;
+            --neon-glow: rgba(0, 210, 255, 0.6);
+            --bg-dark: rgba(4, 8, 15, 0.75);
+            --text-color: #ffffff;
         }
-    </script>
-    <p>
-        <a href="#" onclick="changeLanguage('english'); return false">English</a>
-        <a href="#" onclick="changeLanguage('russian'); return false">Русский</a>
-    </p>
-    <div id="english" class="language" style="display: block">
-        <h3>READ THIS CAREFULLY BEFORE PROCEEDING</h3>
-        <p><b>In case you're dumb: this ONLY works on FW 9.0<u>0</u>. If you are on 6.72 or lower, go
-                <a href="https://sleirsgoevy.github.io/ps4jb/">here</a>. If you are on 7.00-7.02, go
-                <a href="https://sleirsgoevy.github.io/ps4jb/index702.html">here</a>. If you are on 7.50-7.55, 
-                go <a href="https://sleirsgoevy.github/ps4jb2/75x/">here</a>. If you are on a
-                higher firmware (e.g. 9.03), your console CAN'T BE HACKED yet.</b></p>
-        <ol>
-            <li>Flash <a href="https://github.com/ChendoChap/pOOBs4/raw/master/exfathax.img">this image</a> onto a USB drive. You can
-                use the "Etcher" program (download <a href="https://www.balena.io/etcher/">here</a>) to perform the flashing.
-                <b>Note: this will erase your USB drive, and you will NOT be able to use it for anything else. It will become a
-                jailbreaking dongle ONLY.</b></li>
-            <li>Click on the link that says JB+MIRA<s> or JB+HEN</s>, depending on your personal habits. In about a minute you'll
-                be prompted to insert the USB drive you prepared. Insert the USB drive, wait for the notification about
-                the invalid format to pop up, then eject the drive and click OK. <b>Important: never leave the drive inserted during a reboot!</b></li>
-            <li>You will get a message saying "There is not enough free system memory". This is normal, just click OK.</li>
-            <li>After 20 more seconds you will get an alert saying "You're all set!", followed by "There is not enough free system memory". This means that
-                everything has gone well. Note: if using Mira, the screen will go dark for a dozen of seconds.<br />
-                If something went wrong during the process, you may get an alert with an error. In this case you must reboot
-                your PS4, preferrably without closing the dialog box.<br />
-                If the system hangs for more than a minute (may require more time on slow Internet connections), reboot
-                your PS4 and try again.<br />
-                If the system crashes (looks like instant powerdown), press the power button on the PS4 (NOT on the
-                gamepad) until it turns on again, then retry.
-            </li>
-            <li>If you get a "There is not enough free system memory" message without any pop-ups, then it means that the webkit
-                exploit has failed. Click OK and retry. <b>This error is not going to harm your console.</b></li>
-            <li><b>For advanced users:</b> To load your own payloads using NetCat, run JB+NETCAT and send the
-                payload to TCP port 9021 (9020 for the legacy version).</li>
-        </ol>
-        <p><i>This exploit <b>does</b> crash and hang. Sometimes you even have to retry 10 times to get the
-                jailbreak.</i></p>
-        <p><i>Credits: @ChendoChap for kernel exploit (both the vulnerability and the implementation), Google Project Zero for WebKit vulnerability.</i></p>
-    </div>
-    <div id="russian" class="language" style="display: none">
-        <h3>ВНИМАТЕЛЬНО ПРОЧИТАЙТЕ ИНСТРУКЦИЮ ПРЕЖДЕ ЧЕМ ПРОДОЛЖАТЬ</h3>
-        <p><b>Для даунов: этот взлом работает ТОЛЬКО на прошивке 9.0<u>0</u>. Если у вас прошивка 6.72 или ниже, вам
-                <a href="https://sleirsgoevy.github.io/ps4jb/">сюда</a>. Если у вас прошивка с 7.00 по 7.02, вам
-                <a href="https://sleirsgoevy.github.io/ps4jb/index702.html">сюда</a>. Если у вас прошивка с 7.50 по 7.55,
-                вам <a href="https://sleirsgoevy.github.io/ps4jb2/75x/">сюда</a>. Если прошивка выше, эту консоль
-                взломать НЕ ПОЛУЧИТСЯ (9.03 уже так не ломается, нужно именно 9.00).</b></p>
-        <ol>
-            <li>Вам нужно прошить на USB-флешку (или жёсткий диск, но это расточительно)
-                <a href="https://github.com/ChendoChap/pOOBs4/raw/master/exfathax.img">специальный образ</a>, вызывающий
-                повреждение памяти PS4. Это можно сделать с помощью программы Etcher (скачать можно <a href="https://www.balena.io/etcher/">здесь</a>).
-                <b>Обратите внимание: все данные будут удалены, и эту флешку нельзя будет использовать ни для чего больше.</b></li>
-            <li>Нажмите на ссылку &laquo;JB+MIRA&raquo;<s> (или &laquo;JB+HEN&raquo;, что вам больше нравится)</s>. В течение приблизительно минуты
-                появится всплывающее окно &laquo;Insert USB now. do not close the dialog until notification pops, remove usb after closing it.&raquo;.
-                Не закрывая его, вставьте флешку и дождитесь системного сообщения &laquo;Формат файловой системы не поддерживается&raquo;, после чего
-                вытащите флешку и нажмите OK. <b>Внимание: ни в коем случае не оставляйте флешку в приставке, втыкайте её только для активации!</b></li>
-            <li>Вылетит сообщение "Недостаточно свободной оперативной памяти". Это нормально, просто нажмите OK.</li>
-            <li>Примерно через 20 секунд появится всплывающее окно &laquo;You're all set&raquo;, после чего вылетит ошибка нехватки памяти. При использовании Mira экран также
-                может ненадолго погаснуть. Если все произошло именно так, взлом сработал.<br />
-                Если что-то пошло не так, может вылететь сообщение об ошибке. В этом случае необходимо, не закрывая окно, перезагрузить консоль.<br />
-                Если взлом занимает больше минуты, и у вас адекватное интернет-соединение, скорее всего он повис.
-                Перезагрузите приставку и попробуйте еще раз.<br />
-                Если система крашится (выглядит как мгновенное выключение), нажимайте кнопку включения на ПРИСТАВКЕ (НЕ
-                НА КОНТРОЛЛЕРЕ), пока она не включится, после чего повторите взлом.
-            </li>
-            <li>Если вместо успешного взлома появляется ошибка нехватки памяти без каких-либо еще сообщений, это означает,
-                что эксплойт WebKit не сработал. <b>Эта ошибка вылезает в 90% случаях и НЕ ВРЕДИТ СИСТЕМЕ, просто повторите попытку.</b>
-            </li>
-            <li><b>Для продвинутых пользователей:</b> чтобы отправить пейлоад по сети (NetCat), выберите JB+NETCAT,
-                и отправьте пейлоад на TCP-порт 9021 (9020 для Legacy-версии).</li>
-        </ol>
-        <p><i>Эксплойт <b>будет</b> крашиться и виснуть, иногда вообще только с 10 попытки заводится. Тут пока что
-                никуда не денешься, разве что и дальше ждать взлом от @SpecterDev.</i></p>
-        <p><i>Credits: @ChendoChap &mdash; эксплоит ядра (уязвимость и реализация), Google Project Zero &mdash; уязвимость WebKit</i></p>
-    </div>
-    <div id="progress"></div>
 
-<p>
-<a href="jb.html#p0=mira/mira.js&p1=mira/mira2.js">JB+MIRA</a>
-<!-- not yet -->
-<!--<a href="jb.html#p0=mira/jbcldr.js&p1=ps4-hen-vtx.js">JB+HEN</a>-->
-<!-- /not yet -->
-<a href="jb.html#p0=mira/jbcldr.js&p1=linux/1gb.js">JB+LINUX (VRAM 1GB)</a>
-<a href="jb.html#p0=mira/jbcldr.js&p1=linux/3gb.js">JB+LINUX (VRAM 3GB)</a>
-<a href="jb.html#p0=mira/jbcldr.js&p1=ftp.js">JB+FTP</a>
-<a href="psfree.html">PSFree + GoldHEN</a>
-<a href="jb.html">JB+NETCAT (LEGACY)</a>
-<a href="jb.html#p0=mira/jbcldr.js">JB+NETCAT</a>
-</p>
+        body {
+            background: url('PsFree/IMG_0800.png') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-dark);
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--neon-blue);
+            text-shadow: 0 0 20px var(--neon-glow);
+            letter-spacing: 3px;
+            margin: 0;
+        }
+
+        p.subtitle {
+            color: #cbd5e0;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 450px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            background: rgba(8, 14, 24, 0.85);
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover, .btn:focus {
+            background: var(--neon-blue);
+            color: #04080f;
+            box-shadow: 0 0 25px var(--neon-blue);
+            transform: scale(1.02);
+        }
+
+        footer {
+            font-size: 0.85rem;
+            color: #a0aec0;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MAGIC STORE</h1>
+        <p class="subtitle">اختر إصدار السوفت وير الخاص بجهازك</p>
+    </header>
+
+    <div class="container">
+        <!-- زرار سوفت 9.00 -->
+        <a href="PsFree/index.html" class="btn">PS4 Firmware 9.00 (PSFree)</a>
+
+        <!-- زرار السوفتات الشاملة (5.05 - 13.52) -->
+        <a href="https://sw4ps4-ps.github.io/ar" class="btn">PS4 Firmware (5.05 - 13.52)</a>
+    </div>
+
+    <footer>
+        <p>MAGIC STORE &copy; - Portal</p>
+    </footer>
+
 </body>
-
 </html>
