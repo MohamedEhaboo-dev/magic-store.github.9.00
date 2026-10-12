@@ -1,47 +1,123 @@
-<!-- Copyright (C) 2023-2025 anonymous
+<!-- Copyright (C) 2023-2025 anonymous -->
+<!-- This file is part of PSFree. -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>MAGIC STORE - PSFree PS4 9.00</title>
+    <style>
+        :root {
+            --neon-blue: #00d2ff;
+            --neon-glow: rgba(0, 210, 255, 0.6);
+            --text-color: #ffffff;
+        }
 
-This file is part of PSFree.
+        body {
+            /* استخدام الصورة IMG_0800.png كخلفية كاملة للشاشة */
+            background: url('IMG_0800.png') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-PSFree is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
+        /* طبقة حماية شفافة عشان الكلام والكونسول يبقوا واضحة جداً فوق اللوجو */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(4, 8, 15, 0.65);
+            z-index: -1;
+        }
 
-PSFree is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
+        header {
+            text-align: center;
+            margin-top: 10px;
+        }
 
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
--->
-<html>
-    <head>
-        <meta charset='utf-8'>
-        <title>PSFree-Lapse Exploit For PS4 9.00</title>
-        <style>
-            @font-face {
-                font-family: 'logging';
-                src: url('fonts/LiberationMono-Regular.ttf');
-            }
-            #console {
-                font-family: 'logging';
-            }
-        </style>
-        <script>
+        h1 {
+            font-size: 1.6rem;
+            color: var(--neon-blue);
+            text-shadow: 0 0 15px var(--neon-glow);
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        @font-face {
+            font-family: 'logging';
+            src: url('fonts/LiberationMono-Regular.ttf');
+        }
+
+        #console {
+            font-family: 'logging', monospace;
+            background: rgba(8, 14, 24, 0.85);
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 15px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 750px;
+            min-height: 180px;
+            max-height: 280px;
+            overflow-y: auto;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+            font-size: 0.9rem;
+            text-align: left;
+            direction: ltr;
+        }
+
+        .info-text {
+            color: #cbd5e0;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .info-text a {
+            color: var(--neon-blue);
+            text-decoration: none;
+        }
+
+        footer {
+            font-size: 0.85rem;
+            color: #a0aec0;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
         if (window.applicationCache.status=='0')
         {
-          window.location.replace("cache.html");
+            window.location.replace("cache.html");
         }
-        </script>
-    </head>
-    <body>
-       <img src="../03fa1912-6003-43a3-b6b5-b0d54dd24c74.jpeg" alt="MAGIC STORE" style="width:180px;max-width:80%;height:auto;display:block;margin:20px auto;"> PSFree: A PS4/PS5 Exploit Chain
-        <br>
-        <br>
-        See <a href='./about.html' data-jslicense='1'>JavaScript license information</a> for the
-        source code and license.<br>
-        <pre id='console'></pre>
-    </body>
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>MAGIC STORE - EXPLOITS</h1>
+    </header>
+
+    <div class="info-text">
+        PSFree: A PS4/PS5 Exploit Chain <br>
+        <a href="./about.html" data-jslicense="1">Source code and license.</a>
+    </div>
+
+    <!-- كونسول الثغرة -->
+    <pre id="console"></pre>
+
+    <footer>
+        <p>MAGIC STORE &copy; - Developed by Ibrahem Ehab</p>
+    </footer>
+
     <script type='module' src='./alert.mjs'></script>
+</body>
 </html>
