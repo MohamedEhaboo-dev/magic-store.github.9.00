@@ -197,7 +197,7 @@
 
     .status-line::before {
       color: var(--green);
-      content: " Status : READY ";
+      content: "Status : READY ";
     }
 
     #spin {
@@ -226,24 +226,24 @@
 
     body.done .status-line::before {
       color: var(--green);
-      content: " Status : DONE ";
+      content: "Status : DONE ";
     }
 
     body.fail .status-line::before {
       color: var(--red);
-      content: " Status : FAIL ";
-    }
-
-    body.done #msg {
-      border-color: var(--green);
-      color: #7fd0a0;
-      font-weight: 700;
-      letter-spacing: 1px;
+      content: "Status : FAIL ";
     }
 
     body.fail #msg {
       border-color: var(--red);
       color: var(--red);
+    }
+    
+    body.done #msg {
+      border-color: var(--green);
+      color: #7fd0a0;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     .credits {
@@ -329,6 +329,7 @@
       <div id="state"></div>
       <div class="status-line"></div>
       <pre id="out"></pre>
+    </section>
   </main>
   <footer class="credits">
     <div class="credits-line">
@@ -340,7 +341,7 @@
     </div>
   </footer>
   <script type="module">import "./jb.js?v=19";</script>
-  <script>
+    <script>
     (function () {var cacheEl = document.getElementById("cache");
         function setCache(text, ok) {
             if (!cacheEl) return;
@@ -415,7 +416,8 @@
 
     // var FIRMWARE_MODE = 'list';
     // var ALLOWED_FIRMWARES = [9.00,9.03,9.04,9.50];
-
+    // 
+    
     function getRootSelector() {
       return '/webkit/';
     }
